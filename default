@@ -1,0 +1,27 @@
+#this is a server block
+server {
+
+
+        listen 80;
+        server_name localhost;
+        
+        location / {
+            root /home/abhijeet/Desktop/Assignment-5;
+            index index.html;
+        }
+        
+        error_page 404 /error404.html;
+        location = /error404.html {
+            root /home/abhijeet/Desktop/Assignment-5/views;
+            internal;
+        }
+        
+        error_page   500 502 503 504  /error50x.html;
+        location = /error50x.html {
+            root /home/abhijeet/Desktop/Assignment-5/views;
+            internal;
+        }
+        
+        
+
+} 
